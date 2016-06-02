@@ -1,11 +1,11 @@
 class Answer
-  attr_accessor :text, :correctness
-  def initialize(text, correctness)
+  attr_accessor :text, :correct
+  def initialize(text, correct)
     @text = text
-    @correctness = correctness
+    @correct = correct
   end
 
   def to_s
-    "'#{@text}' (#{@correctness})"
+    "'#{@text}' (#{@correct})"
   end
 end

@@ -6,23 +6,24 @@ class Test
 
   def initialize(title, percMinimum)
     @title = title
-    unless percMinimum.between?(0,100)
-      raise "#{NAME} percMinimum parameter requires to be between 0-100 (it is a percentage), you provided #{percMinimum}!"
-    end
     @percMinimum = percMinimum
     @questions = []
+  end
+
+  def last_question
+    @questions.last.question
   end
 
   def add_question(question)
     @questions << Tuple.new("question#{@questions.length + 1}", question)
   end
 
-  def get_total_points()
+  def total_points
     @questions.inject(0) {|sum, n| sum + n.question.points}
   end
 
-  def get_passing_minimum()
-    (get_total_points * (@percMinimum / 100.0)).ceil
+  def passing_minimum
+    (total_points * (@percMinimum / 100.0)).ceil
   end
 
   def to_html
@@ -78,10 +79,10 @@ class Test
                 if (result) {
                     window.scrollTo(0, 0);
                     $('#submitBtn').hide();
-                    full = #{get_total_points()};
-                    limit = #{get_passing_minimum()};
+                    full = #{total_points()};
+                    limit = #{passing_minimum()};
                     total = 0;
-                    total += #{@questions.collect{|q| "#{q.question.to_json(q.id)}"}.join(";
+                    total += #{@questions.collect{|q| "#{q.question.to_js(q.id)}"}.join(";
                     total += ")};
 
                     $('input').each(function (index, value) {
@@ -113,16 +114,21 @@ class Test
 
             $('input', selected).each(function (index, value) {
                 toBeSelected = $.parseJSON($(value).attr('correct'));
+
+                if (toBeSelected) {
+                    $(value).parent().parent().addClass('has-success');
+                } else {
+                    $(value).parent().parent().addClass('has-error');
+                }
+
                 checked = $(value).is(':checked');
                 if (toBeSelected) {
                     allCorrect += 1; // increment all
                     if (checked) {
-                        $(value).parent().parent().addClass('has-success');
                         selectedCorrect+= 1; // increment points
                     }
                 } else {
                     if (checked) {
-                        $(value).parent().parent().addClass('has-error');
                         selectedIncorrect = true;
                     }
                 }
@@ -144,12 +150,16 @@ class Test
             selectedCorrect = false;
 
             $('input', selected).each(function (index, value) {
+                correct = $.parseJSON($(value).attr('correct'));
+                if (correct) {
+                    $(value).parent().parent().addClass('has-success');
+                } else {
+                    $(value).parent().parent().addClass('has-error');
+                }
                 if ($(value).is(':checked')) {
-                    if ($.parseJSON($(value).attr('correct'))) {
-                        $(value).parent().parent().addClass('has-success');
+                    if (correct) {
                         selectedCorrect = true;
                     } else {
-                        $(value).parent().parent().addClass('has-error');
                         selectedCorrect = false;
                     }
                 }
@@ -240,14 +250,12 @@ class Test
     </div>
 
     <div class='alert alert-danger collapse' id='failure-info'>
-        <strong>Failure!</strong> You have failed with <strong id='failure-points'></strong> points (passing limit was at least #{get_passing_minimum()} points).
+        <strong>Failure!</strong> You have failed with <strong id='failure-points'></strong> points (passing limit was at least #{passing_minimum()} points).
     </div>
 
     <div class='alert alert-warning' id='information-info'>
-        <strong>Be careful!</strong> You will need <strong>#{get_passing_minimum()}</strong> of total #{get_total_points()} points to pass the test.
+        <strong>Be careful!</strong> You will need <strong>#{passing_minimum()}</strong> of total #{total_points()} points to pass the test.
     </div>
-
-    <h2></h2>
 
     #{@questions.collect{|q| q.question.to_html(q.id)}.join("\n")}
 
@@ -266,7 +274,41 @@ class Test
   end
 
   def to_s
-    "Test \'#{@text}\' with minimal passing #{get_passing_minimum()} of #{get_total_points()} is\n#{@questions.collect{|q| q.question}.join("\n")}"
+    "Test \'#{@text}\' with minimal passing #{passing_minimum()} of #{total_points()} is\n#{@questions.collect{|q| q.question}.join("\n")}"
+  end
+
+  def validate(errorReporter)
+    correct = true
+
+    unless percMinimum.between?(0,100)
+      errorReporter.reportError self, "Parameter testu '#{@title}' potrebnePercentaBodov predstavuje minimálnu hranicu na úspešné absolvovanie testu v percentách, tzn. že musí mať rozsah 0-100, ty si uviedol/dla #{@percMinimum}! Prosím, oprav to!"
+      correct = false
+    end
+
+    usedQuestions = []
+    @questions.each do |qt|
+      q = qt.question
+      if usedQuestions.include? q.text
+        errorReporter.reportError self, "Definoval/a si opäť tú istú otázku: '#{q.text}', oprav to prosím!"
+        correct = false
+      else
+        usedQuestions << q.text
+      end
+      tempCorrectQuestion = q.validate(errorReporter)
+      correct = correct && tempCorrectQuestion
+    end
+
+    if @title.strip.empty?
+      errorReporter.reportError self, "Test by mal mať definovaný názov! Dodaj ho prosím."
+      correct = false
+    end
+
+    if @questions.empty?
+      errorReporter.reportError self, "Test '#{@title}' musí mať aspoň jednu otázku! Dodaj ju prosím."
+      correct = false
+    end
+
+    return correct
   end
 end
 

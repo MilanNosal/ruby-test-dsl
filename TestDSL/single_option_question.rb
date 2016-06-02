@@ -1,26 +1,13 @@
-class SingleOptionQuestion
+require_relative './question'
+
+class SingleOptionQuestion < Question
   NAME = 'single-option-question'
 
-  attr_accessor :text, :points, :answers
   def initialize(text, points)
-    @text = text
-    @points = points
-    @answers = []
+    super(text, points)
   end
 
-  def add_answer(answer)
-    if !answer.correctness
-      @answers << answer
-    else
-      if @answers.inject(false) {|sum, n| sum || n.correctness}
-        raise "#{NAME} with text \'#{@text}\' cannot have multiple correct answers!"
-      else
-        @answers << answer
-      end
-    end
-  end
-
-  def to_json(id)
+  def to_js(id)
     "testSingleChoice('##{id}')"
   end
 
@@ -33,7 +20,7 @@ class SingleOptionQuestion
                 <div class='col-sm-8'>
                     <div class='radio'>
                         <label>
-                            #{@answers.collect{|answer| "<input type='radio' name='#{id}optionsRadios' correct='#{answer.correctness}'>
+                            #{@answers.collect{|answer| "<input type='radio' name='#{id}optionsRadios' correct='#{answer.correct}'>
                             #{answer.text}"}.join("
                         </label>
                     </div>
@@ -53,5 +40,35 @@ class SingleOptionQuestion
 
   def to_s
     "\t#{NAME} '#{@text}' for #{points} points with options \n\t\t#{@answers.join("\n\t\t")}"
+  end
+
+  def validate(errorReporter)
+    correct = true
+
+    @pairs.each do |p|
+      errorReporter.reportError p, "Otázka '#{@text}' s jednou správnou odpoveďou nemôže mať v sebe definovaný pár '#{p.left}' <-> '#{p.right}'! Odstráň ho z definície, alebo zmeň typ otázky."
+      correct = false
+    end
+
+    numberOfCorrect = 0
+
+    @answers.select {|a| a.correct}.each do |ca|
+      numberOfCorrect = numberOfCorrect + 1
+      if numberOfCorrect > 1
+        errorReporter.reportError ca, "Otázka '#{@text}' s jednou odpoveďou nemôže mať ďalšiu správnu odpoveď, odstráň odpoveď '#{ca.text}'."
+        correct = false
+      end
+    end
+
+    numberOfCorrect = @answers.select {|a| a.correct}.size
+    numberOfIncorrect = @answers.select {|a| !a.correct}.size
+
+    if numberOfCorrect == 0 || numberOfIncorrect == 0
+      errorReporter.reportError self, "Otázka '#{@text}' musí mať aspoň jednu #{numberOfCorrect == 0 ? "správnu" : "nesprávnu"} odpoveď! Dodaj ju prosím."
+      correct = false
+    end
+
+    superCorrect = super
+    return correct && superCorrect
   end
 end

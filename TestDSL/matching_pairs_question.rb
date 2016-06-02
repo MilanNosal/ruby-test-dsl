@@ -1,27 +1,22 @@
-class MatchingPairsQuestion
+require_relative './question'
+
+class MatchingPairsQuestion < Question
   NAME = 'matching-pairs-question'
 
-  attr_accessor :text, :points, :pairs
   def initialize(text, points)
-    @text = text
-    @points = points
-    @pairs = []
+    super(text, points)
   end
 
-  def add_pair(pair)
-    @pairs << pair
+  def get_all_matching_options
+    @pairs.collect{|pair| pair.right}.uniq.shuffle
   end
 
-  def get_all_pairable()
-    @pairs.collect{|pair| pair.right}
-  end
-
-  def to_json(id)
+  def to_js(id)
     "testPairingAnswer('##{id}')"
   end
 
   def to_html(id)
-    allOptionsHtml = "#{get_all_pairable().collect{|right| "
+    allOptionsHtml = "#{get_all_matching_options().collect{|right| "
                         <option value='#{right}'>#{right}</option>"}.join()}"
 
     "    <div style='margin:25px 0 25px 0;'>
@@ -32,9 +27,10 @@ class MatchingPairsQuestion
             </div>
 
             #{@pairs.collect{|pair| "            <div class='form-group'>
-                <label class='col-sm-offset-3 control-label col-sm-2 slimFont'>#{pair.left}</label>
+                <label class='col-sm-offset-3 control-label col-sm-3 slimFont'>#{pair.left}</label>
+                <label class=' control-label col-sm-1' style='text-align: center;'>&#x21d0;&#x21d2;</label>
 
-                <div class='col-sm-6'>
+                <div class='col-sm-4'>
                     <select class='form-control' correct='#{pair.right}'>#{allOptionsHtml}
                     </select>
                 </div>
@@ -46,5 +42,17 @@ class MatchingPairsQuestion
 
   def to_s
     "\t#{NAME} '#{@text}' for #{points} points with pairs \n\t\t#{pairs.join("\n\t\t")}"
+  end
+
+  def validate(errorReporter)
+    correct = true
+
+    @answers.each do |a|
+      errorReporter.reportError a, "Otázka na hľadanie zodpovedajúcich párov '#{@text}' nemôže mať v sebe definovanú odpoveď '#{a.text}'! Odstráň odpoveď z definície, alebo zmeň typ otázky."
+      correct = false
+    end
+
+    superCorrect = super
+    return correct && superCorrect
   end
 end
