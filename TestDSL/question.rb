@@ -20,7 +20,7 @@ class Question
     usedAnswers = []
     @answers.each do |a|
       if usedAnswers.include? a.text
-        errorReporter.reportError a, "V rámci tej istej otázky '#{@text}' si opäť definoval/a rovnakú odpoveď: '#{a.text}'! Odstráň ju."
+        errorReporter.reportError a, "In the same question '#{@text}' there are two identical answers: '#{a.text}''! Remove one."
         correct = false
       else
         usedAnswers << a.text
@@ -29,7 +29,7 @@ class Question
     usedAnswers = []
     @pairs.each do |p|
       if usedAnswers.include? (p.left + p.right)
-        errorReporter.reportError p, "V rámci tej istej otázky '#{@text}' si opäť definoval/a rovnaký pár: '#{p.left}' <-> '#{p.right}'! Odstráň ho."
+        errorReporter.reportError p, "In the same question '#{@text}' there are two identical matching pairs: '#{p.left}' <-> '#{p.right}'! Remove one."
         correct = false
       else
         usedAnswers << (p.left + p.right)
@@ -37,12 +37,12 @@ class Question
     end
 
     if @text.strip.empty?
-      errorReporter.reportError self, "Otázka '#{@text}' musí mať definovaný text! Dodaj ho prosím."
+      errorReporter.reportError self, "Every question has to have text! Add it please."
       correct = false
     end
 
     if @points < 1
-      errorReporter.reportError self, "Otázka '#{@text}' musí mať kladný počet bodov (aspoň jeden bod, ty si uviedol/uviedla '#{@points}')! Oprav to."
+      errorReporter.reportError self, "Question '#{@text}' has to have a positive number of points (at least one, you have stated '#{@points}')! Fix it."
       correct = false
     end
 

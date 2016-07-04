@@ -47,7 +47,7 @@ class MultipleOptionsQuestion < Question
     correct = true
 
     @pairs.each do |p|
-      errorReporter.reportError p, "Otázka '#{@text}' s viacerými správnymi odpoveďami nemôže mať v sebe definovaný pár '#{p.left}' <-> '#{p.right}'! Odstráň ho z definície, alebo zmeň typ otázky."
+      errorReporter.reportError p, "Multiple choice question '#{@text}' cannot define a matching pair '#{p.left}' <-> '#{p.right}'! Remove it, or change the question type to one that supports pairs."
       correct = false
     end
 
@@ -55,7 +55,7 @@ class MultipleOptionsQuestion < Question
     numberOfIncorrect = @answers.select {|a| !a.correct}.size
 
     if numberOfCorrect == 0 || numberOfIncorrect == 0
-      errorReporter.reportError self, "Otázka '#{@text}' musí mať aspoň jednu #{numberOfCorrect == 0 ? "správnu" : "nesprávnu"} odpoveď! Dodaj ju prosím."
+      errorReporter.reportError self, "Question '#{@text}' has to define at least one correct and one incorrect answer! Add them please."
       correct = false
     end
 

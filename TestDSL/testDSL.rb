@@ -9,98 +9,95 @@ require_relative './matching_pair'
 ANO = true
 NIE = false
 
-# Vytvorí nový test. V rámci testu je možné definovať jeho názov, počet percent, ktoré je potrebné dosiahnúť na úspech v teste, a zoznam otázok, ktoré budú v teste.
-# Potom nasleduje zoznam otázok v rámci testu.
-# Parametre:
-# _nazov_:: Text v úvodzovkách definujúci názov testu.
-# _potrebnePercentaBodov_:: Číslo od 0 do 100 definujúce, koľko percent bodov je potrebné dosiahnúť na úspech.
-def test (nazov, potrebnePercentaBodov)
-  @test = Test.new nazov, potrebnePercentaBodov
+# Creates a new test. You can define its title, minimal points to success, and the list of questions in the test.
+# If there are no errors in the test definition, the program generates an HTML + JS test and runs it. Otherwise, an error is reported along with a link to the line of code that cause the error.
+# Parameters:
+# _title_:: Text in quotation marks that represent the title.
+# _minimalPoints_:: Points minimum for the success. Cannot be negative, nor it can be more than the maximum possible points for the test (calculated as the possible points for all the questions).
+def create_test (title, minimalPoints)
+  @test = Test.new title, minimalPoints
   @errorReporter = ErrorReporter.new
   @errorReporter.register @test
 end
 
-# Spustí vytvorený test (tento príkaz sa volá na konci súboru). Ak sú v definícii testu nejaké logické chyby, tak test nie je spustený - vtedy je potrebné ohlásené chyby opraviť.
-def spusti
+# Runs the created test (this command is used at the end of the test definition). If there are errors in the test definition the test will not run - errors need to be fixed.
+def run_test
   if validate(@test)
     generate(@test)
   else
-    $stderr.puts "Našli sa chyby, prosím oprav ich a spusti test znova."
+    $stderr.puts "There were some errors, fix them and rerun the program."
   end
 end
 
-# Vytvorí otázku s jedinou správnou odpoveďou. Otázka definuje viacero odpovedí, z ktorých je jedna správna. Pre výber odpovede je použitý radio button umožňujúci vybrať len jednu odpoveď.
-# Otázka musí mať práve jednu správnu a aspoň jednu nesprávnu odpoveď.
-# Za otázkou nasleduje zoznam odpovedí pre danú otázku.
-# Parametre:
-# _text_:: Text otázky v úvodzovkách.
-# _body_:: Počet bodov za danú otázku (musí byť aspoň jeden bod).
-def otazka_s_jednou_spravnou_odpovedou(text, body)
-  question = SingleOptionQuestion.new(text, body)
+# Creates a single choice question. The question defines multiple answers, but only a single one is correct.
+# In the result it is represented by radio buttons.
+# Parameters:
+# _text_:: Question text in quotation marks.
+# _points_:: Positive number of points for the question.
+def single_choice_question(text, points)
+  question = SingleOptionQuestion.new(text, points)
   @errorReporter.register question
   @test.add_question question
 end
 
-# Vytvorí otázku s viacerými správnymi možnosťami. Správnych odpovedí môže byť viac. Za výber každej z nich je možné získať podiel z možných bodov, napr. ak sú 2 správne odpovede dokopy za 5 bodov, vybratím jednej zíkame 2.5 boda (5/2). Ak však vyberieme čo i len jednu nesprávnu odpoveď, nezískame žiadne body.
-# Otázka musí mať aspoň jednu správnu a aspoň jednu nesprávnu odpoveď.
-# Za otázkou nasleduje zoznam odpovedí pre danú otázku.
-# Parametre:
-# _text_:: Text otázky v úvodzovkách.
-# _body_:: Počet bodov za danú otázku (musí byť aspoň jeden bod).
-def otazka_s_viacerymi_spravnymi_odpovedami(text, body)
-  question = MultipleOptionsQuestion.new(text, body)
+# Creates a multiple choice question. This question type can have multiple correct question, for each selected correct answer the user receives a portion of the possible points, e.g., if there are ten points for the question and it has 2 correct answers, each answer is worth 5 points.
+# Selecting incorrect answer nullifies all the points.
+# The question has to have at least one correct and one incorrect answer.
+# Parameters:
+# _text_:: Question text in quotation marks.
+# _points_:: Positive number of points for the question.
+def multiple_choice_question(text, points)
+  question = MultipleOptionsQuestion.new(text, points)
   @errorReporter.register question
   @test.add_question question
 end
 
-# Vytvorí otázku s voľnou odpoveďou (nie je poskytnutá množina odpovedí, z ktorej sa vyberá, ale je potrebné odpoveď vpísať do políčka). Otázka má len jednu správnu odpoveď, ktorú je potrebné uhádnuť. Akákoľvek iná vpísaná odpoveď je považovaná za nesprávnu.
-# Predvolene neberie ohľad na veľkosť písmen, a teda napr. ak máme správnu odpoveď "Mačička", test uzná za správnu aj hodnotu "MAČIČKA". Toto správanie je možné zmeniť nastavením posledného parametra na ANO.
-# Za otázkou nasleduje jedna správna odpoveď na otázku.
-# Parametre:
-# _text_:: Text otázky v úvodzovkách.
-# _body_:: Počet bodov za danú otázku (musí byť aspoň jeden bod).
-# _zohladnitVelkeAMalePismena_:: Určuje, či sa pri porovnávaní správnej odpovede s vpísanou hodnotou má brať ohľad na rozdiel vo veľkosti písmen (Zadaj ANO, alebo NIE). Tento parameter je voliteľný, keď sa neuvedie, použije sa hodnota NIE.
-def otazka_s_volnou_odpovedou(text, body, zohladnitVelkeAMalePismena = NIE)
-  question = OpenQuestion.new(text, body, zohladnitVelkeAMalePismena)
+# Creates open answer question (no options are provided, the user has to fill in a text box). The question has only a single correct answer, all other answers are considered incorrect. By default the answer is not case sensitive.
+# Parameters:
+# _text_:: Question text in quotation marks.
+# _points_:: Positive number of points for the question.
+# _correctAnswer_:: The correct answer to the question.
+def open_answer_question(text, points, correctAnswer)
+  question = OpenQuestion.new(text, points, NIE)
+  @errorReporter.register question
+  @test.add_question question
+  correct_answer(correctAnswer)
+end
+
+# Creates pairing question. As an example there can be pairs such as "school" - "teacher", "airplane" - "pilot", "barracks" - "soldier", etc., where you have to match each item on the left with the corresponding one on the right. In the result, items on the right are randomly shuffled.
+# Parameters:
+# _text_:: Question text in quotation marks.
+# _points_:: Positive number of points for the question.
+def pairing_question(text, points)
+  question = MatchingPairsQuestion.new(text, points)
   @errorReporter.register question
   @test.add_question question
 end
 
-# Vytvorí otázku, v ktorej riešiteľ hľadá dvojice (páry), ktoré k sebe patria. Príkladom môžu byť páry ako "škola" - "učiteľ", "lietadlo" - "pilot", "kasárne" - "vojak", a podobne, kde ku každému výrazu na ľavo je potrebné nájsť správny prvok z množiny tých čo sú napravo. Prvky sprava sú náhodne premiešané, aby nebolo možné ľahko uhádnuť čo patrí k čomu.
-# Za otázkou nasleduje zoznam dvojíc (párov hodnôt) pre danú otázku.
-# Parametre:
-# _text_:: Text otázky v úvodzovkách.
-# _body_:: Počet bodov za danú otázku (musí byť aspoň jeden bod).
-def otazka_na_hladanie_parov(text, body)
-  question = MatchingPairsQuestion.new(text, body)
-  @errorReporter.register question
-  @test.add_question question
-end
-
-# Vytvorí správnu odpoveď na otázku.
-# Parametre:
-# _text_:: Text odpovede v úvodzovkách.
-def spravna_odpoved(text)
+# Creates a correct answer option for a question.
+# Parameters:
+# _text_:: Answer's text in quotation marks.
+def correct_answer(text)
   answer = Answer.new(text, true)
   @errorReporter.register answer
   @test.last_question.add_answer answer
 end
 
-# Vytvorí nesprávnu odpoveď na otázku.
-# Parametre:
-# _text_:: Text odpovede v úvodzovkách.
-def nespravna_odpoved(text)
+# Creates an incorrect answer option for a question.
+# Parameters:
+# _text_:: Answer's text in quotation marks.
+def incorrect_answer(text)
   answer = Answer.new(text, false)
   @errorReporter.register answer
   @test.last_question.add_answer answer
 end
 
-# Vytvorí dvojicu k sebe patriacich prvkov pre otázku na hľadanie párov. Prvý prvok je ten, ktorý je zobrazený, druhý je ten, ktorý sa pridá do zoznamu, z ktorého sa vyberá správna dvojica.
-# Parametre:
-# _prvyPrvok_:: Prvok, ktorý je zobrazený používateľovi.
-# _druhyPrvok_:: Prvok, ktorý sa pridá do množiny možností, z ktorých sa vyberá správny pár.
-def dvojica(prvyPrvok, druhyPrvok)
-  pair = MatchingPair.new(prvyPrvok, druhyPrvok)
+# Create a pair of corresponding items for the pairing question type.
+# Parameters:
+# _firstItem_:: Item to be show to the user.
+# _secondItem_:: Item to be included in the selection list.
+def pair(firstItem, secondItem)
+  pair = MatchingPair.new(firstItem, secondItem)
   @errorReporter.register pair
   @test.last_question.add_pair pair
 end

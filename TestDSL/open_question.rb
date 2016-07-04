@@ -37,7 +37,7 @@ class OpenQuestion < Question
     correct = true
 
     @pairs.each do |p|
-      errorReporter.reportError p, "Otázka '#{@text}' s otvorenou odpoveďou nemôže mať v sebe definovany pár '#{p.left}' <-> '#{p.right}'! Odstráň ho z definície, alebo zmeň typ otázky."
+      errorReporter.reportError p, "Open answer Question '#{@text}' cannot define a matching pair '#{p.left}' <-> '#{p.right}'! Remove it, or change the question type to one that supports it."
       correct = false
     end
 
@@ -48,18 +48,18 @@ class OpenQuestion < Question
 
       if numberOfAnswers == 1
         if !a.correct
-          errorReporter.reportError a, "Otázka '#{@text}' s otvorenou odpoveďou nemôže mať nesprávnu odpoveď (odpoveď '#{a.text}'), ale musí mať práve jednu správnu odpoveď!"
+          errorReporter.reportError a, "Open answer question '#{@text}' cannot define an incorrect answer (answer '#{a.text}')!"
           correct = false
         end
       else
-        errorReporter.reportError a, "Otázka '#{@text}' nesmie mať viacero odpovedí! Ponechaj len jednu správnu a zmaž odpoveď '#{a.text}'."
+        errorReporter.reportError a, "Open answer question '#{@text}' cannot have multiple answers. Remove answer '#{a.text}'."
         correct = false
       end
 
     end
 
     if numberOfAnswers == 0
-      errorReporter.reportError self, "Otázka '#{@text}' musí mať správnu odpoveď! Dodaj ju prosím."
+      errorReporter.reportError self, "Open answer question '#{@text}' has to have a single correct answer! Add it please."
       correct = false
     end
 

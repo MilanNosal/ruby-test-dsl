@@ -2,7 +2,160 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee59cf7-b561-4b93-8147-0c4fd477e465" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/biology_test.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/.idea/chybny.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/TestDSL/answer.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/TestDSL/matching_pair.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/TestDSL/matching_pairs_question.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/TestDSL/multiple_options_question.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/TestDSL/open_question.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/TestDSL/question.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/TestDSL/single_option_question.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/TestDSL/test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/TestDSL/testDSL.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/chybny.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/cc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/cc2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/dvojica.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/errors.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/jednaOdpoved.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/jednaOdpovedPr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/nespravnaOdpoved.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/novyTest.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/parOdpoved.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/parOdpovedPr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/rm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/rm1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/rm2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/spravnaOdpoved.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/spusti.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/test.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/viacOdpoved.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/viacOdpovedPr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/volnaOdpoved.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/img/volnaOdpovedPr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/jazyk.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/prostredie.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/spustanie.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/style/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/style/back.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/style/bullet.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/style/graphic.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/style/link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/style/logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/style/pattern.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/style/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/style/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/style/tab.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/dokumentacia/vety.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/Test z biológie.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/Testzbiológie.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/css/animate.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/css/bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/css/bootstrap-theme.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/css/bootstrap.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/css/creative.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/animated.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/core.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/icons.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/larger.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/path.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/_animated.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/font-awesome/scss/font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/img/header.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/img/portfolio/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/img/portfolio/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/img/portfolio/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/img/portfolio/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/img/portfolio/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/img/portfolio/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/js/bootbox.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/js/cbpAnimatedHeader.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/js/classie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/js/creative.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/js/jquery.easing.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/js/jquery.fittext.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/js/npm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/js/wow.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/less/creative.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chybny/html/test.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/Thumbs.db" afterPath="$PROJECT_DIR$/dokumentacia/img/Thumbs.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/cc.png" afterPath="$PROJECT_DIR$/dokumentacia/img/cc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/cc2.png" afterPath="$PROJECT_DIR$/dokumentacia/img/cc2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/dvojica.png" afterPath="$PROJECT_DIR$/dokumentacia/img/dvojica.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/errors.png" afterPath="$PROJECT_DIR$/dokumentacia/img/errors.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/jednaOdpoved.png" afterPath="$PROJECT_DIR$/dokumentacia/img/jednaOdpoved.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/nespravnaOdpoved.png" afterPath="$PROJECT_DIR$/dokumentacia/img/nespravnaOdpoved.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/parOdpoved.png" afterPath="$PROJECT_DIR$/dokumentacia/img/parOdpoved.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/screen.png" afterPath="$PROJECT_DIR$/dokumentacia/img/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/spravnaOdpoved.png" afterPath="$PROJECT_DIR$/dokumentacia/img/spravnaOdpoved.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/spusti.png" afterPath="$PROJECT_DIR$/dokumentacia/img/spusti.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/test.png" afterPath="$PROJECT_DIR$/dokumentacia/img/test.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/viacOdpoved.png" afterPath="$PROJECT_DIR$/dokumentacia/img/viacOdpoved.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/img/volnaOdpoved.png" afterPath="$PROJECT_DIR$/dokumentacia/img/volnaOdpoved.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/rubytest.iml" afterPath="$PROJECT_DIR$/.idea/rubytest.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDSL/matching_pairs_question.rb" afterPath="$PROJECT_DIR$/TestDSL/matching_pairs_question.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDSL/multiple_options_question.rb" afterPath="$PROJECT_DIR$/TestDSL/multiple_options_question.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDSL/open_question.rb" afterPath="$PROJECT_DIR$/TestDSL/open_question.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDSL/question.rb" afterPath="$PROJECT_DIR$/TestDSL/question.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDSL/single_option_question.rb" afterPath="$PROJECT_DIR$/TestDSL/single_option_question.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDSL/test.rb" afterPath="$PROJECT_DIR$/TestDSL/test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDSL/testDSL.rb" afterPath="$PROJECT_DIR$/TestDSL/testDSL.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dokumentacia/jazyk.html" afterPath="$PROJECT_DIR$/dokumentacia/jazyk.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/test.html" afterPath="$PROJECT_DIR$/html/test.html" />
     </list>
     <ignored path="rubytest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,8 +170,9 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/rubytest@novytest.coverage" NAME="novytest Coverage Results" MODIFIED="1464868413092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rubytest" />
-    <SUITE FILE_PATH="coverage/rubytest@biology_test.coverage" NAME="biology_test Coverage Results" MODIFIED="1464853842180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rubytest" />
+    <SUITE FILE_PATH="coverage/rubytest@biology_test.coverage" NAME="biology_test Coverage Results" MODIFIED="1467662463545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rubytest" />
     <SUITE FILE_PATH="coverage/rubytest@Greeter.coverage" NAME="paint Coverage Results" MODIFIED="1464002093284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rubytest" />
+    <SUITE FILE_PATH="coverage/rubytest@test.coverage" NAME="test Coverage Results" MODIFIED="1467662444647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestDSL" MODULE_NAME="rubytest" />
     <SUITE FILE_PATH="coverage/rubytest@Questions.coverage" NAME="Questions Coverage Results" MODIFIED="1463995850773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rubytest" />
     <SUITE FILE_PATH="coverage/rubytest@testDSL.coverage" NAME="testDSL Coverage Results" MODIFIED="1464362781632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestDSL" MODULE_NAME="rubytest" />
     <SUITE FILE_PATH="coverage/rubytest@Questions__1_.coverage" NAME="Questions (1) Coverage Results" MODIFIED="1463995810539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Quiz" MODULE_NAME="rubytest" />
@@ -32,7 +186,38 @@
     <favorites_list name="rubytest" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="single_option_question.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestDSL/single_option_question.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="66" column="117" selection-start-line="66" selection-start-column="117" selection-end-line="66" selection-end-column="117" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestDSL/test.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="297" column="46" selection-start-line="297" selection-start-column="46" selection-end-line="297" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="biology_test.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/biology_test.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -68,16 +253,16 @@
         <option value="$PROJECT_DIR$/TestDSL/matching_pair.rb" />
         <option value="$PROJECT_DIR$/TestDSL/answer.rb" />
         <option value="$PROJECT_DIR$/html/test.html" />
-        <option value="$PROJECT_DIR$/TestDSL/test.rb" />
-        <option value="$PROJECT_DIR$/TestDSL/question.rb" />
-        <option value="$PROJECT_DIR$/TestDSL/open_question.rb" />
-        <option value="$PROJECT_DIR$/TestDSL/matching_pairs_question.rb" />
-        <option value="$PROJECT_DIR$/TestDSL/multiple_options_question.rb" />
-        <option value="$PROJECT_DIR$/biology_test.rb" />
         <option value="$PROJECT_DIR$/novytest" />
         <option value="$PROJECT_DIR$/novytest.rb" />
-        <option value="$PROJECT_DIR$/TestDSL/single_option_question.rb" />
+        <option value="$PROJECT_DIR$/biology_test.rb" />
         <option value="$PROJECT_DIR$/TestDSL/testDSL.rb" />
+        <option value="$PROJECT_DIR$/TestDSL/matching_pairs_question.rb" />
+        <option value="$PROJECT_DIR$/TestDSL/multiple_options_question.rb" />
+        <option value="$PROJECT_DIR$/TestDSL/open_question.rb" />
+        <option value="$PROJECT_DIR$/TestDSL/question.rb" />
+        <option value="$PROJECT_DIR$/TestDSL/single_option_question.rb" />
+        <option value="$PROJECT_DIR$/TestDSL/test.rb" />
       </list>
     </option>
   </component>
@@ -118,7 +303,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -137,9 +321,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rubytest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rubytest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestDSL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -153,22 +352,7 @@
       <recent name="C:\Users\milan_000\RubymineProjects\rubytest\Quiz" />
     </key>
   </component>
-  <component name="RunManager" selected="Ruby.novytest">
-    <configuration default="false" name="Questions (1)" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
-      <module name="rubytest" />
-      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$/Quiz" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/Quiz/Questions.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Ruby.biology_test">
     <configuration default="false" name="scen" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="rubytest" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -226,6 +410,21 @@
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/novytest.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="rubytest" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$/TestDSL" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/TestDSL/test.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method />
     </configuration>
@@ -344,19 +543,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Ruby.Questions (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Ruby.scen" />
-      <item index="2" class="java.lang.String" itemvalue="Ruby.testDSL" />
-      <item index="3" class="java.lang.String" itemvalue="Ruby.biology_test" />
-      <item index="4" class="java.lang.String" itemvalue="Ruby.novytest" />
+      <item index="0" class="java.lang.String" itemvalue="Ruby.scen" />
+      <item index="1" class="java.lang.String" itemvalue="Ruby.testDSL" />
+      <item index="2" class="java.lang.String" itemvalue="Ruby.biology_test" />
+      <item index="3" class="java.lang.String" itemvalue="Ruby.novytest" />
+      <item index="4" class="java.lang.String" itemvalue="Ruby.test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Ruby.novytest" />
-        <item index="1" class="java.lang.String" itemvalue="Ruby.biology_test" />
-        <item index="2" class="java.lang.String" itemvalue="Ruby.testDSL" />
-        <item index="3" class="java.lang.String" itemvalue="Ruby.scen" />
-        <item index="4" class="java.lang.String" itemvalue="Ruby.Questions (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Ruby.biology_test" />
+        <item index="1" class="java.lang.String" itemvalue="Ruby.test" />
+        <item index="2" class="java.lang.String" itemvalue="Ruby.novytest" />
+        <item index="3" class="java.lang.String" itemvalue="Ruby.testDSL" />
+        <item index="4" class="java.lang.String" itemvalue="Ruby.scen" />
       </list>
     </recent_temporary>
   </component>
@@ -389,34 +588,36 @@
       <workItem from="1464849298740" duration="63000" />
       <workItem from="1464853471695" duration="10934000" />
       <workItem from="1464879626871" duration="21000" />
+      <workItem from="1467028259547" duration="1825000" />
+      <workItem from="1467659971312" duration="2143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131293000" />
+    <option name="totallyTimeSpent" value="135261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14338236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14264706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4358209" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1496" height="836" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4369748" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277311" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -587,40 +788,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/novytest" />
+    <entry file="file://$PROJECT_DIR$/novytest.rb" />
+    <entry file="file://$PROJECT_DIR$/a_aa.rb" />
+    <entry file="file://$PROJECT_DIR$/TestDSL/testDSL.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="97" column="59" selection-start-line="97" selection-start-column="59" selection-end-line="97" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TestDSL/answer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/novytest" />
-    <entry file="file://$PROJECT_DIR$/biology_test.rb" />
-    <entry file="file://$PROJECT_DIR$/TestDSL/single_option_question.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="55" column="43" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestDSL/open_question.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="39" column="185" selection-start-line="39" selection-start-column="185" selection-end-line="39" selection-end-column="185" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestDSL/question.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="39" column="99" selection-start-line="39" selection-start-column="99" selection-end-line="39" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestDSL/matching_pairs_question.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="50" column="189" selection-start-line="50" selection-start-column="189" selection-end-line="50" selection-end-column="189" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -628,31 +811,65 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestDSL/matching_pairs_question.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="50" column="137" selection-start-line="50" selection-start-column="137" selection-end-line="50" selection-end-column="137" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestDSL/multiple_options_question.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="54" column="61" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+        <state relative-caret-position="390">
+          <caret line="57" column="136" selection-start-line="57" selection-start-column="136" selection-end-line="57" selection-end-column="136" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestDSL/open_question.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="61" column="122" selection-start-line="61" selection-start-column="122" selection-end-line="61" selection-end-column="122" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestDSL/question.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="44" column="152" selection-start-line="44" selection-start-column="152" selection-end-line="44" selection-end-column="152" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestDSL/single_option_question.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="66" column="117" selection-start-line="66" selection-start-column="117" selection-end-line="66" selection-end-column="117" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestDSL/test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
-          <caret line="283" column="246" selection-start-line="283" selection-start-column="246" selection-end-line="283" selection-end-column="246" />
+        <state relative-caret-position="118">
+          <caret line="297" column="46" selection-start-line="297" selection-start-column="46" selection-end-line="297" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestDSL/testDSL.rb">
+    <entry file="file://$PROJECT_DIR$/biology_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="130" column="17" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
+        <state relative-caret-position="136">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/novytest.rb" />
-    <entry file="file://$PROJECT_DIR$/a_aa.rb" />
   </component>
 </project>

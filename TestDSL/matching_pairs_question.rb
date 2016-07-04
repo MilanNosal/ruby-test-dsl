@@ -48,7 +48,7 @@ class MatchingPairsQuestion < Question
     correct = true
 
     @answers.each do |a|
-      errorReporter.reportError a, "Otázka na hľadanie zodpovedajúcich párov '#{@text}' nemôže mať v sebe definovanú odpoveď '#{a.text}'! Odstráň odpoveď z definície, alebo zmeň typ otázky."
+      errorReporter.reportError a, "Pairing question '#{@text}' cannot contain answer '#{a.text}'! Remove it, or change the question type"
       correct = false
     end
 

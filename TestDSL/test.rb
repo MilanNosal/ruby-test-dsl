@@ -2,11 +2,11 @@
 class Test
   NAME = 'test'
 
-  attr_accessor :title, :percMinimum, :questions
+  attr_accessor :title, :minimalPoints, :questions
 
-  def initialize(title, percMinimum)
+  def initialize(title, minimalPoints)
     @title = title
-    @percMinimum = percMinimum
+    @minimalPoints = minimalPoints
     @questions = []
   end
 
@@ -23,7 +23,7 @@ class Test
   end
 
   def passing_minimum
-    (total_points * (@percMinimum / 100.0)).ceil
+    @minimalPoints
   end
 
   def to_html
@@ -280,8 +280,8 @@ class Test
   def validate(errorReporter)
     correct = true
 
-    unless percMinimum.between?(0,100)
-      errorReporter.reportError self, "Parameter testu '#{@title}' potrebnePercentaBodov predstavuje minimálnu hranicu na úspešné absolvovanie testu v percentách, tzn. že musí mať rozsah 0-100, ty si uviedol/dla #{@percMinimum}! Prosím, oprav to!"
+    unless @minimalPoints.between?(0,total_points)
+      errorReporter.reportError self, "Minimal points for the success in the test '#{@title}' has to be in range 0-#{total_points} (total possible points for the test), you have stated #{@minimalPoints}! Fix it please!"
       correct = false
     end
 
@@ -289,7 +289,7 @@ class Test
     @questions.each do |qt|
       q = qt.question
       if usedQuestions.include? q.text
-        errorReporter.reportError self, "Definoval/a si opäť tú istú otázku: '#{q.text}', oprav to prosím!"
+        errorReporter.reportError self, "You have defined two question with text: '#{q.text}', fix it (you can have only one question with the same text)!"
         correct = false
       else
         usedQuestions << q.text
@@ -299,12 +299,12 @@ class Test
     end
 
     if @title.strip.empty?
-      errorReporter.reportError self, "Test by mal mať definovaný názov! Dodaj ho prosím."
+      errorReporter.reportError self, "Test have to have a title, fix it please."
       correct = false
     end
 
     if @questions.empty?
-      errorReporter.reportError self, "Test '#{@title}' musí mať aspoň jednu otázku! Dodaj ju prosím."
+      errorReporter.reportError self, "Test '#{@title}' has to have at least a single question, add it please."
       correct = false
     end
 

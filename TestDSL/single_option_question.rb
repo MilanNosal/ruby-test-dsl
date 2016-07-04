@@ -46,7 +46,7 @@ class SingleOptionQuestion < Question
     correct = true
 
     @pairs.each do |p|
-      errorReporter.reportError p, "Otázka '#{@text}' s jednou správnou odpoveďou nemôže mať v sebe definovaný pár '#{p.left}' <-> '#{p.right}'! Odstráň ho z definície, alebo zmeň typ otázky."
+      errorReporter.reportError p, "Single choice question '#{@text}' cannot define matching pair '#{p.left}' <-> '#{p.right}'! Remove it, or change the question type to one that supports pairs."
       correct = false
     end
 
@@ -55,7 +55,7 @@ class SingleOptionQuestion < Question
     @answers.select {|a| a.correct}.each do |ca|
       numberOfCorrect = numberOfCorrect + 1
       if numberOfCorrect > 1
-        errorReporter.reportError ca, "Otázka '#{@text}' s jednou odpoveďou nemôže mať ďalšiu správnu odpoveď, odstráň odpoveď '#{ca.text}'."
+        errorReporter.reportError ca, "Single choice question '#{@text}' cannot have multiple correct answers, remove '#{ca.text}'."
         correct = false
       end
     end
@@ -64,7 +64,7 @@ class SingleOptionQuestion < Question
     numberOfIncorrect = @answers.select {|a| !a.correct}.size
 
     if numberOfCorrect == 0 || numberOfIncorrect == 0
-      errorReporter.reportError self, "Otázka '#{@text}' musí mať aspoň jednu #{numberOfCorrect == 0 ? "správnu" : "nesprávnu"} odpoveď! Dodaj ju prosím."
+      errorReporter.reportError self, "Question '#{@text}' has to have at least one correct and one incorrect answer."
       correct = false
     end
 
